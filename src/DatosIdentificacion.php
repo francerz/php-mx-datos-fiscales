@@ -1,6 +1,6 @@
 <?php
 
-namespace Francerz\MxDatosFiscales;
+namespace Francerz\MxSatCif;
 
 use DateTimeImmutable;
 use JsonSerializable;

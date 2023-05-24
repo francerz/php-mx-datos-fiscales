@@ -1,11 +1,11 @@
 {
-    "name": "francerz/mx-datos-fiscales",
-    "description": "Consulta Datos Fiscales de Sistema de Administraci\u0000n Tributaria de M\u0000xico.",
+    "name": "francerz/mx-sat-cif",
+    "description": "Consulta Datos Fiscales de Sistema de Administración Tributaria de México.",
     "type": "library",
     "license": "ISC",
     "autoload": {
         "psr-4": {
-            "Francerz\\MxDatosFiscales\\": "src/"
+            "Francerz\\MxSatCif\\": "src/"
         }
     },
     "require": {
