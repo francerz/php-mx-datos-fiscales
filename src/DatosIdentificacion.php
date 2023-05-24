@@ -6,6 +6,7 @@ use DateTimeImmutable;
 use JsonSerializable;
 
 /**
+ * @property-read string $tipo
  * @property-read string|null $curp
  * @property-read string|null $nombre
  * @property-read string|null $apellidoPaterno
