@@ -1,0 +1,20 @@
+{
+    "name": "francerz/mx-datos-fiscales",
+    "description": "Consulta Datos Fiscales de Sistema de Administraci\u0000n Tributaria de M\u0000xico.",
+    "type": "library",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "Francerz\\MxDatosFiscales\\": "src/"
+        }
+    },
+    "require": {
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "fig/http-message-util": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "francerz/http": "^0.3.14"
+    }
+}
