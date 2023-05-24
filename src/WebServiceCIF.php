@@ -66,16 +66,6 @@ class WebServiceCIF
         return null;
     }
 
-    private static function getFirstNodeText(DOMXPath $domXPath, string $path)
-    {
-        $nodeList = $domXPath->query($path);
-        $domNode =  $nodeList->item(0);
-        if (is_null($domNode)) {
-            return null;
-        }
-        return utf8_decode($domNode->textContent);
-    }
-
     private static function toDateTimeImmutable(string $datetime)
     {
         return new DateTimeImmutable($datetime);
