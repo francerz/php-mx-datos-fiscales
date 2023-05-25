@@ -20,14 +20,49 @@ Utilización
 ```php
 use Francerz\MxSatCif\WebServiceCIF;
 
+/**
+ * Un objeto compatible con ClientInterface (PSR-18).
+ * 
+ * @var Psr\Http\Client\ClientInterface
+ * */
 $httpClient = new HttpClient();
+
+/**
+ * Un objeto compatible con RequestFactoryInterface (PSR-17).
+ * 
+ * @var Psr\Http\Message\RequestFactoryInterface
+ * */
 $requestFactory = new RequestFactory();
 
+/**
+ * Crea una instancia de la conexión al web service para recuperar los datos
+ * de las cédulas de identificación fiscal.
+ */
 $wscif = new WebServiceCIF($httpClient, $requestFactory);
 
+/**
+ * Identificador de la Cédula de Identificación Fiscal.
+ * Se puede encontrar en el documento de RFC y Constancia de Situación Fiscal.
+ *
+ * @var string
+ * */
 $idCIF = '12000000000';
+
+/**
+ * Clave del Registo Federal del Contribuyente (RFC).
+ *
+ * @var string
+ * */
 $rfc = 'XAXX000101XAX';
 
+/**
+ * Una instancia de Cédula de Identificación Fiscal, correspondiente a los datos
+ * obtenidos del idCif y rfc proporcionados.
+ * 
+ * Si no existe, se devolverá null.
+ * 
+ * @var Francerz\MxSatCif\CedulaIdentificacionFiscal
+ */
 $cedula = $wscif->fetch($idCIF, $rfc);
 
 /*
