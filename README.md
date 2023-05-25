@@ -54,7 +54,7 @@ $idCIF = '12000000000';
  *
  * @var string
  */
-$rfc = 'XAXX000101XAX';
+$rfc = 'XAXX010101000';
 
 /**
  * Una instancia de Cédula de Identificación Fiscal, correspondiente a los datos
