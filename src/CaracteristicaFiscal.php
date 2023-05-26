@@ -11,12 +11,12 @@ use JsonSerializable;
  */
 class CaracteristicaFiscal implements JsonSerializable
 {
-    /** @var string */
+    /** @var RegimenFiscal */
     public $regimen;
     /** @var DateTimeImmutable */
     public $fechaAlta;
 
-    public function __construct(string $regimen, DateTimeImmutable $fechaAlta)
+    public function __construct(RegimenFiscal $regimen, DateTimeImmutable $fechaAlta)
     {
         $this->regimen = $regimen;
         $this->fechaAlta = $fechaAlta;

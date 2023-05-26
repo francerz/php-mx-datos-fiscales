@@ -130,6 +130,8 @@ class WebServiceCIF
         if (is_null($regimen)) {
             return null;
         }
+        $regimenes = CatalogoRegimenes::getInstance();
+        $regimen = $regimenes->find($regimen);
         $fechaAlta = static::toDateTimeImmutable(static::getTdText($domXPath, $i * 4 + $offset + 2));
         return new CaracteristicaFiscal($regimen, $fechaAlta);
     }
