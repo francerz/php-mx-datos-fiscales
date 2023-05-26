@@ -121,8 +121,11 @@ echo $cedula->correoElectronico;    // (string) Dirección de correo electrónic
     $cedula->caracteristicas : CaracteristicaFiscal[]
 */
 foreach ($cedula->caracteristicas as $caracteristica) {
-    echo $caracteristica->regimen;      // (string) Nombre del régimen.
-    echo $caracteristica->fechaAlta;    // (DateTimeImmutable) Fecha de alta del régimen.
+    /* $caracteristica->regimen (tipo:RegimenFiscal) */
+    echo $caracteristica->regimen->clave;       // (string) Clave del régimen fiscal.
+    echo $caracteristica->regimen->descripcion; // (string) Descripción del régimen.
+
+    echo $caracteristica->fechaAlta;            // (DateTimeImmutable) Fecha de alta del régimen.
 }
 
 ```
