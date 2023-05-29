@@ -6,12 +6,21 @@ use DateTimeImmutable;
 use JsonSerializable;
 
 /**
+ * PERSONA FÍSICA
  * @property-read string $tipo
  * @property-read string|null $curp
  * @property-read string|null $nombre
  * @property-read string|null $apellidoPaterno
  * @property-read string|null $apellidoMaterno
  * @property-read DateTimeImmutable|null $fechaNacimiento
+ *
+ * PERSONA MORAL
+ * @property-read string|null $denominacion
+ * @property-read string|null $razonSocial
+ * @property-read string|null $regimenCapital
+ * @property-read DateTimeImmutable|null $fechaConstitucion
+ *
+ * PERSONA FISICA Y MORAL
  * @property-read DateTimeImmutable|null $fechaInicioOperaciones
  * @property-read string|null $situacionContribuyente
  * @property-read DateTimeImmutable|null $fechaUltimoCambioSituacion
@@ -20,6 +29,8 @@ class DatosIdentificacion implements JsonSerializable
 {
     public const TIPO_PERSONA_FISICA = 'Persona Física';
     public const TIPO_PERSONA_MORAL = 'Persona Moral';
+
+    public const SITUACION_ACTIVO = 'ACTIVO';
 
     /** @var string */
     private $tipo;
@@ -118,6 +129,7 @@ class DatosIdentificacion implements JsonSerializable
                 return $this->apellidoMaterno;
             case 'fechaNacimiento':
                 return $this->fechaNacimiento;
+            case 'denominacion':
             case 'razonSocial':
                 return $this->razonSocial;
             case 'regimenCapital':
