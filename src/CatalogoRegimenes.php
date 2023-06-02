@@ -60,6 +60,9 @@ final class CatalogoRegimenes
         return $descripcion;
     }
 
+    /**
+     * @return RegimenFiscal[]
+     */
     private function getRegimenesNormalizados()
     {
         /** @var RegimenFiscal[] */
@@ -75,10 +78,10 @@ final class CatalogoRegimenes
 
     public function get(string $clave)
     {
-        if (!isset($this->regimenes[$clave])) {
-            return null;
+        if (isset($this->regimenes[$clave])) {
+            return $this->regimenes[$clave];
         }
-        return $this->regimenes[$clave];
+        return null;
     }
 
     public function find(string $regimen)

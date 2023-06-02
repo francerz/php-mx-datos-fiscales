@@ -9,7 +9,7 @@ use JsonSerializable;
  * @property-read string $rfc
  * @property-read DatosIdentificacion $identificacion
  * @property-read DatosUbicacion $ubicacion
- * @property-read CaracteristicaFiscal[] $caracteristicas;
+ * @property-read CaracteristicaFiscal[] $caracteristicas
  */
 class CedulaIdentificacionFiscal implements JsonSerializable
 {
