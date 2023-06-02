@@ -6,7 +6,7 @@ use DateTimeImmutable;
 use JsonSerializable;
 
 /**
- * @property-read string $regimen
+ * @property-read RegimenFiscal $regimen
  * @property-read DateTimeImmutable $fechaAlta
  */
 class CaracteristicaFiscal implements JsonSerializable
