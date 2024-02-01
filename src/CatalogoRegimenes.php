@@ -50,12 +50,14 @@ final class CatalogoRegimenes
 
     private static function normalizarDescripcion($descripcion)
     {
+        $descripcion = trim($descripcion, " \n\r\t\v\0.");
         $descripcion = strtr($descripcion, [
             'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U',
             'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
             'Ñ' => 'N', 'ñ' => 'n', 'Ü' => 'U', 'ü' => 'u'
         ]);
         $descripcion = strtolower($descripcion);
+        $descripcion = preg_replace('/\s+/', ' ', $descripcion);
         $descripcion = preg_replace('/^(regimen\s+((de|del)\s+)?((el|la|los|las)\s+)?)/', '', $descripcion);
         return $descripcion;
     }
